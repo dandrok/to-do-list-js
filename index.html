@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main-window">
+      <div class="header">
+        <h1>To Do List</h1>
+        <button onclick="remall()" class="btn">reset</button>
+      </div>
+      <div>
+        <p>How it works?</p>
+        <ul class="how">
+          <li>
+            <p>
+              enter the text in the box and then click "+" (or click enter) to
+              add the item to the list. the maximum number of characters is 50
+            </p>
+          </li>
+          <li>
+            <p>
+              click on the <span class="bold">created item</span> to remove it
+              from the list
+            </p>
+          </li>
+          <li>
+            <p>click reset to restart the whole list to its initial state</p>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+        <div>
+          <input
+            type="text"
+            id="input"
+            name="fname"
+            placeholder="Add Something"
+            maxlength="50"
+            class="input"
+            onkeypress="return searchKeyPress(event);"
+          />
+        </div>
+        <button id="add" class="btn">+</button>
+        <ul id="list"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
